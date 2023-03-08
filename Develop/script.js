@@ -54,3 +54,17 @@ else {
 if (hasLowercase === false && hasUppercase === false && hasNumbers === false && hasSpecial === false) {
   return "Please select at least one character type.";
 };
+
+// group selected characters
+if (hasLowercase) {
+  possibleCharacters = possibleCharacters.concat(lowercaseCharacters);
+}
+if (hasUppercase) {
+  possibleCharacters = possibleCharacters.concat(uppercaseCharacters);
+}
+if (hasNumbers) {
+  possibleCharacters = possibleCharacters.concat(numericCharacters);
+}
+if (hasSpecial) {
+  possibleCharacters = possibleCharacters.concat(specialCharacters);
+}
